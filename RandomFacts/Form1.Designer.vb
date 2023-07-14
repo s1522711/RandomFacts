@@ -38,7 +38,7 @@ Partial Class Form1
         Button1.Font = New Font("Comic Sans MS", 11F, FontStyle.Regular, GraphicsUnit.Point)
         Button1.Location = New Point(12, 12)
         Button1.Name = "Button1"
-        Button1.Size = New Size(85, 30)
+        Button1.Size = New Size(110, 30)
         Button1.TabIndex = 0
         Button1.Text = "Get Fact!"
         Button1.UseVisualStyleBackColor = True
@@ -64,9 +64,9 @@ Partial Class Form1
         DeSel.AutoSize = True
         DeSel.Location = New Point(6, 47)
         DeSel.Name = "DeSel"
-        DeSel.Size = New Size(79, 24)
+        DeSel.Size = New Size(84, 24)
         DeSel.TabIndex = 1
-        DeSel.Text = "German"
+        DeSel.Text = "Deutsch"
         DeSel.UseVisualStyleBackColor = True
         ' 
         ' EnSel
@@ -101,13 +101,14 @@ Partial Class Form1
         AutoSize = True
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         ClientSize = New Size(456, 135)
+        Controls.Add(Button1)
         Controls.Add(TextBox1)
         Controls.Add(GroupBox1)
-        Controls.Add(Button1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MinimumSize = New Size(232, 159)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Fact Generator"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()

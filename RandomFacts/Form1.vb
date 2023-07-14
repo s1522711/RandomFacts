@@ -37,4 +37,35 @@ Public Class Form1
         Dim output = parsejson.SelectToken("text").ToString()
         TextBox1.Text = output
     End Sub
+
+    Private Sub DeSel_CheckedChanged(sender As Object, e As EventArgs) Handles DeSel.CheckedChanged
+        GroupBox1.Text = "Language"
+        Button1.Text = "Holen Sie sich Tatsachen!"
+        Button1.Width = "195"
+        Button1.Height = "30"
+        TextBox1.Location = New Point(213, 12)
+        Width = "553"
+        GroupBox1.Width = "195"
+        TextBox1.Text = "Bitte drücken Sie die Taste, um zu starten!"
+        Text = "Faktengenerator"
+    End Sub
+
+    Private Sub EnSel_CheckedChanged(sender As Object, e As EventArgs) Handles EnSel.CheckedChanged
+        GroupBox1.Text = "Sprache"
+        Button1.Text = "Get Fact!"
+        Button1.Width = "110"
+        Button1.Height = "30"
+        TextBox1.Location = New Point(128, 12)
+        Width = "472"
+        GroupBox1.Width = "110"
+        TextBox1.Text = "Please Press The Button to Start!"
+        Text = "Fact Generator"
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Application.EnableVisualStyles()
+    End Sub
+    Private Sub Form1_Close(sender As Object, e As EventArgs) Handles MyBase.Closing
+        LaunchLangSel.Close()
+    End Sub
 End Class
