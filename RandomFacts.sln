@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RandomFacts", "RandomFacts\RandomFacts.vbproj", "{02EAF652-31E2-470F-8557-B33C64D48D36}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "RandomFacts", "RandomFacts\RandomFacts.vbproj", "{02EAF652-31E2-470F-8557-B33C64D48D36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9FD33D0-6A4F-4750-ADD9-84E07D7932E5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

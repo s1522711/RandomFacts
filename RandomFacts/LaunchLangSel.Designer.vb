@@ -52,7 +52,7 @@ Partial Class LaunchLangSel
         BtnDe.Name = "BtnDe"
         BtnDe.Size = New Size(287, 172)
         BtnDe.TabIndex = 1
-        BtnDe.Text = "German"
+        BtnDe.Text = "Deutsch"
         BtnDe.UseVisualStyleBackColor = True
         ' 
         ' Label1
@@ -84,6 +84,7 @@ Partial Class LaunchLangSel
         Controls.Add(Label1)
         Controls.Add(BtnDe)
         Controls.Add(BtnEn)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "LaunchLangSel"

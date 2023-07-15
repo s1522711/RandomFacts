@@ -1,10 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
-Imports Microsoft.VisualBasic.ApplicationServices
-
-
-Public Class LaunchLangSel
+﻿Public Class LaunchLangSel
     Private Sub BtnEn_Click(sender As Object, e As EventArgs) Handles BtnEn.Click
         Form1.GroupBox1.Text = "Sprache"
         Form1.Button1.Text = "Get Fact!"
@@ -17,8 +11,12 @@ Public Class LaunchLangSel
         Form1.Text = "Fact Generator"
         Form1.EnSel.Checked = 1
         Form1.DeSel.Checked = 0
+        Loading.Label1.Text = "LOADING, PLEASE WAIT!"
+        Loading.Text = "Loading Fact generator"
         Hide()
-        Form1.Show()
+        Loading.Timer1.Enabled = True
+        Loading.Timer2.Enabled = True
+        Loading.Show()
     End Sub
 
     Private Sub BtnDe_Click(sender As Object, e As EventArgs) Handles BtnDe.Click
@@ -33,8 +31,12 @@ Public Class LaunchLangSel
         Form1.Text = "Faktengenerator"
         Form1.DeSel.Checked = 1
         Form1.EnSel.Checked = 0
+        Loading.Label1.Text = "LADEN, BITTE WARTEN!"
+        Loading.Text = "Laden des Faktengenerators"
         Hide()
-        Form1.Show()
+        Loading.Timer1.Enabled = True
+        Loading.Timer2.Enabled = True
+        Loading.Show()
     End Sub
 
     Private Sub LaunchLangSel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
