@@ -30,7 +30,11 @@ Partial Class Form1
         DeSel = New RadioButton()
         EnSel = New RadioButton()
         TextBox1 = New TextBox()
+        GroupBox2 = New GroupBox()
+        DayFact = New RadioButton()
+        RanFact = New RadioButton()
         GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
@@ -38,7 +42,7 @@ Partial Class Form1
         Button1.Font = New Font("Comic Sans MS", 11F, FontStyle.Regular, GraphicsUnit.Point)
         Button1.Location = New Point(12, 12)
         Button1.Name = "Button1"
-        Button1.Size = New Size(110, 30)
+        Button1.Size = New Size(143, 30)
         Button1.TabIndex = 0
         Button1.Text = "Get Fact!"
         Button1.UseVisualStyleBackColor = True
@@ -54,20 +58,21 @@ Partial Class Form1
         GroupBox1.Font = New Font("Comic Sans MS", 11F, FontStyle.Regular, GraphicsUnit.Point)
         GroupBox1.Location = New Point(12, 48)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(110, 75)
+        GroupBox1.Size = New Size(147, 75)
         GroupBox1.TabIndex = 2
         GroupBox1.TabStop = False
-        GroupBox1.Text = "Language"
+        GroupBox1.Text = "Sprache"
         ' 
         ' DeSel
         ' 
         DeSel.AutoSize = True
+        DeSel.BackColor = Color.Transparent
         DeSel.Location = New Point(6, 47)
         DeSel.Name = "DeSel"
         DeSel.Size = New Size(84, 24)
         DeSel.TabIndex = 1
         DeSel.Text = "Deutsch"
-        DeSel.UseVisualStyleBackColor = True
+        DeSel.UseVisualStyleBackColor = False
         ' 
         ' EnSel
         ' 
@@ -84,15 +89,52 @@ Partial Class Form1
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox1.Location = New Point(128, 12)
+        TextBox1.Location = New Point(165, 12)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
         TextBox1.ReadOnly = True
         TextBox1.RightToLeft = RightToLeft.No
         TextBox1.ScrollBars = ScrollBars.Both
-        TextBox1.Size = New Size(316, 111)
+        TextBox1.Size = New Size(316, 192)
         TextBox1.TabIndex = 3
         TextBox1.Text = "Please Press The Button to Start!"
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(DayFact)
+        GroupBox2.Controls.Add(RanFact)
+        GroupBox2.Font = New Font("Comic Sans MS", 11F, FontStyle.Regular, GraphicsUnit.Point)
+        GroupBox2.Location = New Point(12, 129)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(147, 75)
+        GroupBox2.TabIndex = 4
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Fact Type"
+        ' 
+        ' DayFact
+        ' 
+        DayFact.AutoSize = True
+        DayFact.BackColor = Color.Transparent
+        DayFact.Font = New Font("Comic Sans MS", 11F, FontStyle.Regular, GraphicsUnit.Point)
+        DayFact.Location = New Point(6, 47)
+        DayFact.Name = "DayFact"
+        DayFact.Size = New Size(137, 24)
+        DayFact.TabIndex = 1
+        DayFact.Text = "Fact of the Day"
+        DayFact.UseVisualStyleBackColor = False
+        ' 
+        ' RanFact
+        ' 
+        RanFact.AutoSize = True
+        RanFact.Checked = True
+        RanFact.Font = New Font("Comic Sans MS", 11F, FontStyle.Regular, GraphicsUnit.Point)
+        RanFact.Location = New Point(6, 22)
+        RanFact.Name = "RanFact"
+        RanFact.Size = New Size(116, 24)
+        RanFact.TabIndex = 0
+        RanFact.TabStop = True
+        RanFact.Text = "Random Fact"
+        RanFact.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -100,18 +142,21 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         AutoSizeMode = AutoSizeMode.GrowAndShrink
-        ClientSize = New Size(456, 135)
+        ClientSize = New Size(492, 216)
+        Controls.Add(GroupBox2)
         Controls.Add(Button1)
         Controls.Add(TextBox1)
         Controls.Add(GroupBox1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
-        MinimumSize = New Size(232, 159)
+        MinimumSize = New Size(508, 255)
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Fact Generator"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -122,4 +167,7 @@ Partial Class Form1
     Friend WithEvents DeSel As RadioButton
     Friend WithEvents EnSel As RadioButton
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents DayFact As RadioButton
+    Friend WithEvents RanFact As RadioButton
 End Class
